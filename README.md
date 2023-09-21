@@ -1,212 +1,27 @@
-# Setting Up a Nuxt + Tailwind Project
+# 🎨 Art Gallery with Unsplash API
 
-When working on modern web applications, it's quite common to use the combination of Nuxt and Tailwind CSS for a seamless development experience. In this article, I'll guide you through setting up a new Nuxt3 project integrated with Tailwind CSS, and adding other essential modules.
+## Objective
 
-## 1. **Creating a New Nuxt3 Project**
+The objective of this project was to create an image gallery leveraging the capabilities of the Unsplash API.
 
-To get started, create a new Nuxt3 application with the following command:
+## Project Description
 
-```bash
-npx nuxi@latest init my-app
-```
+This Art Gallery project was primarily developed to showcase my proficiency in Nuxt3 and my adeptness with contemporary web technologies. By demonstrating these skills, my hope is to inspire confidence in potential employers and collaborators about the quality and efficiency of my work.
 
-## 2. **Installing TailwindCSS**
+### Key Features:
 
-Next, install TailwindCSS to our Nuxt project using:
+- **Nuxt3 Integration:** This project is a testament to my skills in the latest version of Nuxt, Nuxt3. This modern framework aids in developing robust and efficient applications, and my implementation ensures a smooth user experience.
+- **Tailwind CSS:** A utility-first CSS framework that has been instrumental in crafting the sleek, responsive design you see. It allowed for rapid development without sacrificing aesthetics or functionality.
+- **Nuxt Image:** Efficient and size-optimized image rendering ensures faster load times and an enhanced user experience.
+- **useState Composable:** For state management, the `useState` composable was employed to keep the application's data flow streamlined and maintainable.
+- **LocalStorage Integration:** LocalStorage has been seamlessly integrated to allow users to save and track their favorite images across sessions, ensuring a personalized user experience for returning users.
+- **Dynamic Routing with Nuxt:** The dynamic routing capabilities enable each image to have its own dedicated page, enhancing the SEO capabilities and overall shareability of the content.
+- **Responsive Design:** With Tailwind CSS, the gallery is not only aesthetically pleasing but also fully responsive, ensuring users on all devices get a consistent viewing experience.
 
-```bash
-npm install --save-dev @nuxtjs/tailwindcss
-```
+### Live Project:
 
-Once installed, you need to register the TailwindCSS module in your Nuxt configuration. Update your `modules` to include:
+You can view the live project at [myproject.netlify.app](https://myproject.netlify.app/).
 
-```javascript
-modules: ["@nuxtjs/tailwindcss"];
-```
+## Contact & Feedback
 
-Create a new CSS file for Tailwind in `./assets/css/tailwind.css` and include:
-
-```css
-@tailwind base;
-
-@tailwind components;
-
-@tailwind utilities;
-
-.markdown h1 {
-  @apply text-3xl  font-semibold  mt-8  mb-4;
-}
-.markdown h2 {
-  @apply text-2xl  font-semibold  mt-6  mb-3;
-}
-.markdown h3 {
-  @apply text-xl  font-semibold  mt-5  mb-2;
-}
-.markdown p {
-  @apply mt-6  text-lg  leading-8  text-gray-600;
-}
-.markdown a {
-  @apply text-primary600  underline;
-}
-.markdown code {
-  @apply bg-gray-100  p-1  rounded;
-}
-.markdown pre {
-  @apply bg-gray-200  p-4  rounded-md  overflow-x-scroll;
-}
-.markdown ul {
-  @apply list-disc  pl-5  my-2;
-}
-.markdown ol {
-  @apply list-decimal  pl-5  my-2;
-}
-.markdown blockquote {
-  @apply p-6  my-6  border-l-2  border-primary500  bg-primary50  pl-4  text-lg  font-medium  leading-8;
-}
-.markdown img {
-  @apply max-w-full  h-auto  rounded-md  my-4;
-}
-```
-
-Additionally, install the Tailwind Forms plugin:
-
-```bash
-npm install -D @tailwindcss/forms
-```
-
-If you want to use the `Inter` font, create a CSS file at `./assets/css/inter.css` and import the font:
-
-```css
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-```
-
-Finally, create a `tailwind.config.js` to customize the Tailwind configuration:
-
-```javascript
-module.exports = {
-  content: [
-    "./assets/**/*.css",
-    "./components/*.{vue,js}",
-    "./components/**/*.{vue,js}",
-    "./pages/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./*.{vue,js,ts}",
-    "./nuxt.config.{js,ts}",
-  ],
-  plugins: [require("@tailwindcss/forms")],
-  theme: {
-    fontFamily: {
-      sans: "Inter, sans-serif",
-    },
-    extend: {
-      colors: {
-        primary50: "#EFF8FE",
-        primary100: "#DFF1FD",
-        primary200: "#B9E5FC",
-        primary300: "#7DD2FB",
-        primary400: "#38BCF7",
-        primary500: "#069CDF",
-        primary600: "#0283C5",
-        primary700: "#0368A0",
-        primary800: "#075884",
-        primary900: "#0C496C",
-      },
-    },
-  },
-};
-```
-
-## 3. **Integrating with Headless UI**
-
-Headless UI is a great companion for TailwindUI. To integrate:
-
-```bash
-npm install --save-dev nuxt-headlessui
-```
-
-Register it in your Nuxt modules:
-
-```javascript
-modules: ["nuxt-headlessui"];
-```
-
-## 4. **Installing Heroicons for TailwindUI**
-
-bashCopy code
-
-`npm install @heroicons/vue`
-
-## 5. **Localization with i18n**
-
-For multi-language support:
-
-```bash
-npm install @nuxtjs/i18n@next --save-dev
-```
-
-Then, update your `modules` and `nuxt.config.ts` to configure the `i18n` options.
-
-## 6. **Adding Image Support with Nuxt Image**
-
-```bash
-npm install -D @nuxt/image@rc
-```
-
-And add `@nuxt/image` to your Nuxt modules.
-
-## 7. **Enhancing SEO with schema-org**
-
-```bash
-npm install -D nuxt-schema-org
-```
-
-Update your `modules` to include `nuxt-schema-org`.
-
-## 8. **Setting Up a Simple Sitemap**
-
-```bash
-npm install -D nuxt-simple-sitemap
-```
-
-Add `nuxt-simple-sitemap` to your Nuxt modules.
-
-## 9. **Utilizing Markdown with Markdown It**
-
-To work with markdown content:
-
-```bash
-npm install markdown-it
-```
-
-You can utilize it in your application like:
-
-```javascript
-import  MarkdownIt  from  'markdown-it';  const  md =  new  MarkdownIt();`
-```
-
-## 10. **Integrating Google Analytics with Nuxt Gtag**
-
-```bash
-npm i -D nuxt-gtag
-```
-
-Add `nuxt-gtag` to your Nuxt modules and configure its options.
-
-## 11. **Adding Animations with vueuse/motion**
-
-Install vueuse/motion:
-
-```bash
-npm install @vueuse/motion
-```
-
-Add `@vueuse/motion/nuxt` to your modules.
-
----
-
-In this guide, we've meticulously laid out the steps to craft a Nuxt3 application integrated with Tailwind CSS, alongside other indispensable modules. If you'd rather skip the setup and dive straight into development, feel free to clone our repository which offers this entire setup as a boilerplate. By using this foundation, you're poised to commence your web application journey seamlessly.
-
-**Clone the repository and start your project!**
-
-Happy coding, and best of luck with your projects!# image-gallery
+I'm always open to feedback, collaborations, or job opportunities. If you're an employer or collaborator who's impressed with the project, or if you have any suggestions for improvement, please do not hesitate to reach out.

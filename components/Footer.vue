@@ -4,7 +4,7 @@ import { defineComponent, h } from "vue";
 const navigation = [
   {
     name: "GitHub",
-    href: "https://github.com/RomanJarmukhametov",
+    href: "https://github.com/RomanJarmukhametov/image-gallery",
     icon: defineComponent({
       render: () =>
         h("svg", { fill: "currentColor", viewBox: "0 0 24 24" }, [
