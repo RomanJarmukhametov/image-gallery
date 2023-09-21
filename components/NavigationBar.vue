@@ -37,7 +37,7 @@ const updateQuery = (newQuery) => {
         <div>
           <NuxtLink to="/">
             <NuxtImg
-              src="/images/logo.svg"
+              src="/logo.svg"
               alt="Logo"
               width="192"
               height="72"
