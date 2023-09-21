@@ -20,7 +20,7 @@ This Art Gallery project was primarily developed to showcase my proficiency in N
 
 ### Live Project:
 
-You can view the live project at [myproject.netlify.app](https://myproject.netlify.app/).
+You can view the live project at [https://image-gallery-by-roman.netlify.app](https://image-gallery-by-roman.netlify.app/).
 
 ## Contact & Feedback
 

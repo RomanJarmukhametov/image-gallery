@@ -41,6 +41,7 @@ const updateQuery = (newQuery) => {
               alt="Logo"
               width="192"
               height="72"
+              format="svg"
             />
           </NuxtLink>
         </div>
