@@ -21,13 +21,18 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "nuxt-headlessui",
     "@nuxt/image",
-    "nuxt-schema-org",
     "nuxt-simple-sitemap",
     "@vueuse/motion/nuxt",
     "@formkit/auto-animate/nuxt",
+    "nuxt-simple-sitemap",
+    "nuxt-schema-org",
   ],
 
   headlessui: {
     prefix: "Headless",
+  },
+
+  image: {
+    provider: "unsplash",
   },
 });

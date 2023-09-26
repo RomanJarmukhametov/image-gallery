@@ -1,33 +1,33 @@
 <script setup>
-// Define props for the component
-const { forHomePage } = defineProps({
-  forHomePage: {
-    type: Boolean,
-    default: true,
-  },
-});
+  // Define props for the component
+  const { forHomePage } = defineProps({
+    forHomePage: {
+      type: Boolean,
+      default: true,
+    },
+  });
 
-// Create a local reactive variable initialized with the value of the prop
-const isHomePage = ref(forHomePage);
+  // Create a local reactive variable initialized with the value of the prop
+  const isHomePage = ref(forHomePage);
 
-// Reactive variable to determine whether to show the search bar
-const showSearch = ref(false);
+  // Reactive variable to determine whether to show the search bar
+  const showSearch = ref(false);
 
-// Toggle the showSearch state
-const showSearchBar = () => {
-  showSearch.value = true;
-};
+  // Toggle the showSearch state
+  const showSearchBar = () => {
+    showSearch.value = true;
+  };
 
-// Hide the search bar on submit
-const hideSearchBarOnSubmit = () => {
-  showSearch.value = false;
-};
+  // Hide the search bar on submit
+  const hideSearchBarOnSubmit = () => {
+    showSearch.value = false;
+  };
 
-// Define a reactive variable to store the search query
-const searchQuery = useState("searchQuery", () => "art");
-const updateQuery = (newQuery) => {
-  searchQuery.value = newQuery;
-};
+  // Define a reactive variable to store the search query
+  const searchQuery = useState("searchQuery", () => "art");
+  const updateQuery = (newQuery) => {
+    searchQuery.value = newQuery;
+  };
 </script>
 
 <template>
@@ -36,13 +36,7 @@ const updateQuery = (newQuery) => {
       <Container class="p-4 flex items-center justify-between text-white">
         <div>
           <NuxtLink to="/">
-            <NuxtImg
-              src="/logo.svg"
-              alt="Logo"
-              width="192"
-              height="72"
-              format="svg"
-            />
+            <img src="/images/logo.svg" alt="Logo" width="192" height="72" />
           </NuxtLink>
         </div>
 

@@ -57,7 +57,7 @@ const navigation = [
 </script>
 
 <template>
-  <footer class="bg-black">
+  <footer class="bg-black mt-10">
     <div
       class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8"
     >
