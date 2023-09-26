@@ -33,6 +33,9 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: "unsplash",
+    domains: ["images.unsplash.com"],
+    alias: {
+      unsplash: "https://images.unsplash.com",
+    },
   },
 });
