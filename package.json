@@ -15,7 +15,7 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.5",
-    "nuxt": "^3.7.3",
+    "nuxt": "^3.7.4",
     "nuxt-headlessui": "^1.1.4"
   },
   "dependencies": {
@@ -23,7 +23,6 @@
     "@heroicons/vue": "^2.0.18",
     "@vueuse/motion": "^2.0.0",
     "markdown-it": "^13.0.1",
-    "nuxt-schema-org": "^3.0.0",
     "nuxt-simple-sitemap": "^3.3.4"
   }
 }
